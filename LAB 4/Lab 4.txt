@@ -1,0 +1,35 @@
+ 
+public class SolutionExample {
+    
+    // Skeleton function
+    public static void main(String[] args) {
+        // Example of eager solution
+        eagerSolution();
+        
+        // Example of lazy solution
+        lazySolution();
+    }
+
+    // Eager Solution
+    public static void eagerSolution() {
+        // Eager solution implementation here
+        System.out.println("Eager Solution:");
+        int result = 0;
+        
+        // Example eager computation (sums numbers)
+        for (int i = 1; i <= 10; i++) {
+            result += i;  // eagerly computes sum
+        }
+        System.out.println("Sum of numbers 1 to 10 is: " + result);
+    }
+
+public static void lazySolution() {
+        // Lazy solution implementation here
+        System.out.println("Lazy Solution:");
+
+               java.util.stream.IntStream.range(1, 11)  // Lazy evaluation through streams
+            .forEach(i -> System.out.println("Lazy sum for " + i));
+    }
+}
+
+
